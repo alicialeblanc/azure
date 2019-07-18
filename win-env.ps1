@@ -4,10 +4,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 Write-Host "Chocolatey installed. Installing git"
 
-choco install -y poshgit
+choco install -y git
 
 Write-Host "git installed, installing node"
 
-choco install nodejs-lts -y
+choco install nodejs -y
 
-Write-Host "Nodejs installed, setup complete"
+Write-Host "Nodejs installed, installing .NET"
+
+choco install dotnet3.5 -y
+
+Write-Host ".NET installed, setup complete"
